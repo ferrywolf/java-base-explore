@@ -56,6 +56,7 @@ public class ToyTest {
 
         }
         printInfo(obj.getClass());
+        print("提交测试");
     }
 
 }
