@@ -1,4 +1,4 @@
-package hy.base.literal.main;
+package hy.base.generic.main;
 
 /**
  * 泛化的class引用
