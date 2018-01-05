@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day_01-typeinfo.iml" filepath="$PROJECT_DIR$/day_01-typeinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/literal/literal.iml" filepath="$PROJECT_DIR$/literal/literal.iml" />
     </modules>
   </component>
 </project>
