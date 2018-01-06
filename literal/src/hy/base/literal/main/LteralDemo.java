@@ -61,6 +61,7 @@ public class LteralDemo {
         }
         System.out.println("After creating Initable3 ref");
         System.out.println(Initable3.staticNonFinal);
+        System.out.println("my git test");
     }
 
 }
