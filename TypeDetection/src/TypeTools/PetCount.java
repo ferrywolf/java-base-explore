@@ -3,6 +3,7 @@ package TypeTools;
 import typeinfo.pets.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PetCount {
 
@@ -20,7 +21,7 @@ public class PetCount {
             }
         }
     }
-    //计数函数
+    //计数函数,这个显得过于繁杂
     public static void countPets(PetCreator creator){
         PetCounter counter = new PetCounter();
         Pet [] pets = creator.createArray(20);
@@ -66,8 +67,29 @@ public class PetCount {
         System.out.println(counter);
     }
 
+    //计数方法的替代方法
+    public static Map<String,Integer> CountPetsPro(PetCreator creator){
+
+        Map<String,Integer> petMap = new HashMap<String, Integer>();
+        Pet[] pets = creator.createArray(20);
+
+        for (Pet pet:pets){
+            String petName = pet.getClass().getSimpleName().toString();
+            Integer petNum = petMap.get(petName);
+            if(petNum == null){
+                petMap.put(petName,1);
+            }else{
+                petMap.put(petName,petNum+1);
+            }
+        }
+
+        return petMap;
+
+    }
+
     public static void main(String[] args) {
         countPets(new ForNameCreator());
+        System.out.print(CountPetsPro(new ForNameCreator()));
     }
 
 }
